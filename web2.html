@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps and AWS Knowledge</title>
+  <style>
+    body {
+      font-family: 'Calibri', sans-serif;
+      text-align: left;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0071bc; /* Change header background color to blue */
+      color: #fff; /* Change header text color to white */
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .site-title {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      color: #fff; /* Change the color of the site title to white */
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    h1 {
+      color: #0071bc;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    section {
+      background-color: #fff; /* Change the background color of sections */
+      margin: 0; /* Remove margin */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .section-header {
+      color: #0071bc;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #0071bc; /* Change footer background color to blue */
+      color: #fff; /* Change footer text color to white */
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto; /* Push the footer to the bottom */
+    }
+
+    /* Style for the pop-up div */
+    .popup {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="site-title">DevOps and AWS Knowledge</h1>
+    <nav>
+      <a href="javascript:void(0);" onmouseover="showPopup(this, 'This is Home Page')" onmouseout="hidePopup()">Home</a>
+      <a href="https://en.wikipedia.org/wiki/DevOps" onmouseover="showPopup(this, 'Wikipedia DevOps findings')" onmouseout="hidePopup()" target="_blank">Wikipedia</a>
+      <a href="javascript:void(0);" onmouseover="showPopup(this, 'To Be Defined')" onmouseout="hidePopup()">Sources</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2 class="section-header">DevOps</h2>
+    <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
+    <h2 class="section-header">AWS (Amazon Web Services)</h2>
+    <p>AWS is a secure cloud services platform, offering computing power, storage, and content delivery, as well as a range of application services. AWS allows you to build, deploy, and scale applications quickly and efficiently.</p>
+  </section>
+
+  <footer>
+    <p>Brought to you by ChatGPT</p>
+  </footer>
+
+  <!-- Pop-up div content -->
+  <div class="popup" id="popupDiv"></div>
+
+  <script>
+    // JavaScript code to show and hide the pop-up div
+    function showPopup(element, message) {
+      var popupDiv = document.getElementById('popupDiv');
+      var rect = element.getBoundingClientRect();
+      popupDiv.style.left = rect.left + 'px';
+      popupDiv.style.top = (rect.bottom + 10) + 'px';
+      popupDiv.innerHTML = message; // Set the pop-up message
+      popupDiv.style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('popupDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
